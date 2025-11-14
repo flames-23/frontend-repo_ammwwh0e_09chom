@@ -15,14 +15,19 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-black text-white;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.35);
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
 @layer utilities {
   .animate-in {
     animation-name: animateIn;
